@@ -1,10 +1,9 @@
 import React, { ReactNode } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Menu from '../components/Menu';
 import MyAppBar from '../components/MyAppBar';
 
-interface LoggedInSideBarProps {
+interface NotLoggedInProps {
   children?: ReactNode;
   title?: string;
 }
@@ -28,21 +27,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function LoggedInSideBar(props: LoggedInSideBarProps) {
+export default function NotLoggedIn(props: NotLoggedInProps) {
   const { children, title } = props;
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
 
   return (
     <div className={classes.root}>
-      <MyAppBar loggedIn open={open} handleDrawerOpen={handleDrawerOpen} title={title} />
-      <Menu open={open} handleDrawerClose={handleDrawerClose} />
+      <MyAppBar title={title} />
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         {children}
