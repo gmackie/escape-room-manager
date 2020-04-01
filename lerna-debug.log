@@ -1,0 +1,8 @@
+0 silly argv { _: [ 'bootstrap' ],
+0 silly argv   lernaVersion: '3.20.2',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js' }
+1 notice cli v3.20.2
+2 verbose rootPath C:\Users\macki\Desktop\dev\escape-room-manager
+3 error JSONError: Unexpected token } in JSON at position 955 while parsing near '...rser": "^2.25.0",  },  "scripts": {  ...' in packages\escape-room-frontend\package.json
+3 error     at module.exports (C:\Users\macki\Desktop\dev\escape-room-manager\node_modules\parse-json\index.js:26:19)
+3 error     at parse (C:\Users\macki\Desktop\dev\escape-room-manager\node_modules\load-json-file\index.js:15:9)
